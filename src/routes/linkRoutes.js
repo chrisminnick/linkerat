@@ -10,8 +10,9 @@ var links = [
 
 linkRouter.route('/')
     .get(function(req,res){
-        res.render('linkListView',{
-            title:'All the Links'
+        res.render('pages/linkListView',{
+            title:'All the Links',
+            links:links
         });
     });
 
