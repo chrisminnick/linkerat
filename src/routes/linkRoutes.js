@@ -11,11 +11,9 @@ var links = [
 linkRouter.route('/')
     .get(function(req,res){
         res.render('linkListView',{
-            title:'Links'
-        }, {
-            links: links
-        }
-    )
-});
+            title:'All the Links'
+        });
+    });
+
 
 module.exports = linkRouter;
