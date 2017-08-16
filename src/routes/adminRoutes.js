@@ -2,13 +2,6 @@ var express = require('express');
 var adminRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
 
-var links = [
-    {
-        name: "Google",
-        url: "http://www.google.com"
-    }
-];
-
 var router = function(nav){
 
     adminRouter.route('/addLinks')
