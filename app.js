@@ -16,8 +16,8 @@ var nav = [
         link: '/links',
         text: 'All Links'
     },{
-        link: '/users',
-        text: 'Users'
+        link: '/auth/profile',
+        text: 'Profile'
     }];
 
 var linkRouter = require('./src/routes/linkRoutes')(nav);
