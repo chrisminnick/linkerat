@@ -26,8 +26,9 @@ app.use('/links', linkRouter);
 app.use('/admin', adminRouter);
 
 app.get('/', function(req,res){
-    res.render('index',{
-        title: 'welcome'
+    res.render('pages/index',{
+        title: 'welcome',
+        nav: nav
     });
 });
 
