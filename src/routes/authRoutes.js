@@ -41,6 +41,7 @@ var router = function(nav){
             res.json(req.user);
         });
 
+
     return authRouter;
 };
 
