@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title><%=title %></title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <% for (var i = 0; i<nav.length; i++){ %>
+            <li><a href="<%= nav[i].link %>"><%= nav[i].text %></a></li>
+            <% }%>
+        </ul>
+
+    </nav>
