@@ -5,6 +5,12 @@ var mongodb = require('mongodb').MongoClient;
 var router = function(nav){
 
     adminRouter.route('/listLinks')
+        .all(function(req,res,next){
+            if(!req.user) {
+                res.redirect('/');
+            }
+            next();
+        })
         .get(function(req,res) {
             var url = 'mongodb://localhost:27017/linkerat';
             mongodb.connect(url, function(err,db){
@@ -19,6 +25,12 @@ var router = function(nav){
             });
         });
     adminRouter.route('/addLinks')
+        .all(function(req,res,next){
+            if(!req.user) {
+                res.redirect('/');
+            }
+            next();
+        })
         .get(function(req,res) {
             var url = 'mongodb://localhost:27017/linkerat';
             mongodb.connect(url, function(err,db){

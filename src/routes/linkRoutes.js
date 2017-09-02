@@ -43,6 +43,21 @@ var router = function(nav){
                 })
             })
         });
+    linkRouter.route('/edit/:id')
+        .get(function(req,res){
+            var id = new objectId(req.params.id);
+            var url= 'mongodb://localhost:27017/linkerat';
+            mongodb.connect(url, function(err,db){
+                var collection = db.collection('links');
+                collection.findOne({_id: id},function(err, results) {
+                    res.render('pages/editLinkView', {
+                        title: 'Edit Link',
+                        link: results,
+                        nav: nav
+                    })
+                })
+            })
+        });
     return linkRouter;
 };
 

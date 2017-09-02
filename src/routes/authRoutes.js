@@ -14,7 +14,7 @@ var router = function(nav){
                     username: req.body.userName,
                     password: req.body.password
                 };
-                collection.insertOne(user,function(errr,results){
+                collection.insertOne(user,function(err,results){
                     req.login(results.ops[0], function(){
                         res.redirect('/auth/profile');
                     })

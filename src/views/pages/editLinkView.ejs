@@ -1,0 +1,8 @@
+<% include ../partials/top %>
+<form method="post" action="/links/update/<%=link._id %>">
+    <input type="hidden" name="id" value="<%=link._id %>">
+    <input type="text" name="name" value="<%=link.name %>">
+    <input type="text" name="url" value="<%=link.url %>">
+    <input type="submit" name="submit" value="submit">
+</form>
+<% include ../partials/bottom %>
